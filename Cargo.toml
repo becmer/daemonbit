@@ -1,0 +1,34 @@
+[workspace]
+members = []
+resolver = "3"
+
+[package]
+name = "daemonbit"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description.workspace = true
+documentation.workspace = true
+readme.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+
+[workspace.package]
+version = "0.0.0"
+authors = ["Kamil Becmer"]
+edition = "2024"
+rust-version = "1.85.0"
+description = "Cross-platform daemon lifecycle primitives"
+documentation = "https://docs.rs/daemonbit"
+readme = "README.md"
+repository = "https://github.com/becmer/daemonbit"
+license = "MIT OR Apache-2.0"
+keywords = ["daemon", "service", "systemd", "scm", "cross-platform"]
+categories = ["api-bindings", "asynchronous", "concurrency", "filesystem", "os"]
+
+[workspace.dependencies]
