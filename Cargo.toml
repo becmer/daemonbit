@@ -1,5 +1,11 @@
 [workspace]
-members = []
+members = [
+    "crates/core",
+    "crates/lockfile",
+    "crates/rundir",
+    "crates/test",
+    "crates/winmutex",
+]
 resolver = "3"
 
 [package]
@@ -17,6 +23,13 @@ keywords.workspace = true
 categories.workspace = true
 
 [dependencies]
+daemonbit-core = { workspace = true }
+
+[target.'cfg(unix)'.dependencies]
+daemonbit-lockfile = { workspace = true }
+
+[target.'cfg(windows)'.dependencies]
+daemonbit-winmutex = { workspace = true }
 
 [workspace.package]
 version = "0.0.0"
@@ -32,3 +45,16 @@ keywords = ["daemon", "service", "systemd", "scm", "cross-platform"]
 categories = ["api-bindings", "asynchronous", "concurrency", "filesystem", "os"]
 
 [workspace.dependencies]
+daemonbit-core = { path = "crates/core" }
+daemonbit-lockfile = { path = "crates/lockfile" }
+daemonbit-rundir = { path = "crates/rundir" }
+daemonbit-test = { path = "crates/test" }
+daemonbit-winmutex = { path = "crates/winmutex" }
+
+claims = "0.8"
+const_env = "0.1"
+memchr = "2"
+ntest = "0.9"
+parking_lot = "0.12"
+tracing = "0.1"
+tracing-subscriber = "0.3"

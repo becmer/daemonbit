@@ -1,0 +1,25 @@
+[package]
+name = "daemonbit-winmutex"
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+description.workspace = true
+documentation.workspace = true
+readme.workspace = true
+repository.workspace = true
+license.workspace = true
+keywords.workspace = true
+categories.workspace = true
+
+[dependencies]
+daemonbit-core = { workspace = true }
+tracing = { workspace = true }
+
+[target.'cfg(windows)'.dependencies]
+widestring = { version = "1" }
+windows = { version = "0.61", features = ["Win32_Security", "Win32_System_Threading"] }
+
+[dev-dependencies]
+claims = { workspace = true }
+ntest = { workspace = true }

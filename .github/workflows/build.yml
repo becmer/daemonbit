@@ -19,10 +19,10 @@ jobs:
       - name: Set up Rust
         uses: dtolnay/rust-toolchain@master
         with:
-          toolchain: '1.83'
+          toolchain: '1.85'
 
-      - name: Check
+      - name: Validate lockfile is up to date
         run: cargo check --all-targets --locked --verbose
 
-      - name: Test
+      - name: Run tests across codebase
         run: cargo test --locked --verbose

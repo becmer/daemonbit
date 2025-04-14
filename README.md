@@ -36,11 +36,12 @@
 
 ## MSRV Policy
 
-This crate's Minimum Supported Rust Version (MSRV) is **1.83**. Changes to
-the MSRV will be accompanied by a minor version bump.
+This crate's Minimum Supported Rust Version (MSRV) is **1.85**, as required
+by the 2024 edition. Changes to the MSRV will be accompanied by a minor
+version bump.
 
-As a **tentative** policy, the upper bound of the MSRV is given by the following
-formula:
+The MSRV policy only takes effect beyond 1.85. Once applicable, it will be
+bound by:
 
 ```
 min(sid, stable - 3)
