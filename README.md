@@ -30,7 +30,31 @@
   <img src="https://img.shields.io/badge/status-WIP-orange" alt="Project status: WIP">
 </p>
 
-> **⚠️ Warning**: This project is in early development. The current release is a placeholder to claim the crate name.
+> **⚠️ Warning**: This project is in early development.
+
+<br>
+
+This crate provides the foundational primitives for managing cross-platform daemon lifecycles, with strict support for:
+
+- **Lock enforcement**
+    - `lockfile`-based locking on Unix (using `flock`)
+    - `mutex`-based locking on Windows (using Win32 named mutexes)
+
+- **Runtime directories**
+    - Per-scope (`global`/`local`) runtime directory discovery and fallback
+    - Cleanup on drop for temporary directories
+
+The following major components are planned:
+
+- **Cross-platform IPC**
+    - Unix Domain Socket (UDS)
+    - Named Pipe on Windows
+
+- **System integration**
+    - `systemd`
+    - Windows SCM
+
+These will build on the current abstractions, enabling full lifecycle management of daemons across platforms.
 
 <br>
 

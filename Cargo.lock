@@ -54,7 +54,7 @@ dependencies = [
 
 [[package]]
 name = "daemonbit"
-version = "0.0.0"
+version = "0.1.1"
 dependencies = [
  "daemonbit-core",
  "daemonbit-lockfile",
@@ -63,14 +63,14 @@ dependencies = [
 
 [[package]]
 name = "daemonbit-core"
-version = "0.0.0"
+version = "0.1.1"
 dependencies = [
  "const_env",
 ]
 
 [[package]]
 name = "daemonbit-lockfile"
-version = "0.0.0"
+version = "0.1.1"
 dependencies = [
  "claims",
  "daemonbit-core",
@@ -82,7 +82,7 @@ dependencies = [
 
 [[package]]
 name = "daemonbit-rundir"
-version = "0.0.0"
+version = "0.1.1"
 dependencies = [
  "claims",
  "daemonbit-core",
@@ -92,7 +92,7 @@ dependencies = [
 
 [[package]]
 name = "daemonbit-test"
-version = "0.0.0"
+version = "0.1.1"
 dependencies = [
  "memchr",
  "parking_lot",
@@ -102,7 +102,7 @@ dependencies = [
 
 [[package]]
 name = "daemonbit-winmutex"
-version = "0.0.0"
+version = "0.1.1"
 dependencies = [
  "claims",
  "daemonbit-core",

@@ -32,7 +32,7 @@ daemonbit-lockfile = { workspace = true }
 daemonbit-winmutex = { workspace = true }
 
 [workspace.package]
-version = "0.0.0"
+version = "0.1.1"
 authors = ["Kamil Becmer"]
 edition = "2024"
 rust-version = "1.85.0"
@@ -45,11 +45,11 @@ keywords = ["daemon", "service", "systemd", "scm", "cross-platform"]
 categories = ["api-bindings", "asynchronous", "concurrency", "filesystem", "os"]
 
 [workspace.dependencies]
-daemonbit-core = { path = "crates/core" }
-daemonbit-lockfile = { path = "crates/lockfile" }
-daemonbit-rundir = { path = "crates/rundir" }
-daemonbit-test = { path = "crates/test" }
-daemonbit-winmutex = { path = "crates/winmutex" }
+daemonbit-core = { path = "crates/core", version = "0.1.1" }
+daemonbit-lockfile = { path = "crates/lockfile", version = "0.1.1" }
+daemonbit-rundir = { path = "crates/rundir", version = "0.1.1" }
+daemonbit-test = { path = "crates/test", version = "0.1.1" }
+daemonbit-winmutex = { path = "crates/winmutex", version = "0.1.1" }
 
 claims = "0.8"
 const_env = "0.1"
